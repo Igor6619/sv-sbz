@@ -13,4 +13,8 @@
 ```bash
 alembic upgrade head
 ```
+1. **pgAdmin**
+
+информация о подключении к pgAdmin в файле compose.dev.yaml
+
 
