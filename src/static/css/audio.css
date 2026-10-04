@@ -1,0 +1,228 @@
+.audio-player {
+    max-width: 100%;
+    margin: 20px 0;
+}
+
+.audio-player-container {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 2px solid var(--primary-light);
+}
+
+.audio-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+.audio-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-size: 1.5em;
+    color: var(--white);
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.audio-details {
+    flex: 1;
+}
+
+.audio-name {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    word-break: break-word;
+}
+
+.audio-format {
+    font-size: 0.9em;
+    color: var(--primary-dark);
+    font-weight: 500;
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.play-btn {
+    background: var(--primary-color);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    color: var(--white);
+    font-size: 1.2em;
+    box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
+}
+
+.play-btn:hover {
+    background: var(--primary-dark);
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
+}
+
+.play-btn:active {
+    transform: scale(0.95);
+}
+
+.progress-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.progress-bar {
+    flex: 1;
+    height: 6px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--light-gray);
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.progress-bar::-webkit-slider-thumb:hover {
+    background: var(--primary-dark);
+    transform: scale(1.2);
+}
+
+.progress-bar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.time {
+    font-size: 0.85em;
+    min-width: 45px;
+    text-align: center;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.volume-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 5px;
+    color: var(--primary-color);
+    transition: color 0.2s ease;
+}
+
+.volume-btn:hover {
+    color: var(--primary-dark);
+}
+
+.volume-slider {
+    width: 80px;
+    height: 4px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--light-gray);
+    border-radius: 2px;
+    outline: none;
+    cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.volume-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--white);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .audio-controls {
+        flex-wrap: wrap;
+    }
+
+    .progress-container {
+        order: 3;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .volume-control {
+        order: 2;
+    }
+
+    .audio-player-container {
+        padding: 15px;
+    }
+}
+
+/* Состояние загрузки */
+.audio-loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+/* Состояние ошибки */
+.audio-error {
+    border-color: #f44336;
+}
+
+.audio-error .audio-icon {
+    background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+}

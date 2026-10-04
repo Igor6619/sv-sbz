@@ -1,0 +1,253 @@
+<!-- Только чистый HTML для модального окна -->
+
+<div id="tree-container" style="width: 100%; height: calc(90vh - 140px); overflow: auto; position: relative;">
+    
+    
+
+    <svg id="tree-svg"></svg>
+</div>
+
+<script>
+    let styleLegend = `
+        position:absolute;
+        top:24px;
+        left:24px;
+        border: 2px solid #ffffff;
+        display: flex;
+        flex-direction: column;
+        width: 220px;
+        padding: 12px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        z-index: 10;
+        gap: 8px;
+    `;
+
+    let styleLegendItem = `
+        display:flex;
+        align-items:center;
+        gap: 6px;
+        width:100%;
+        height: 20px;
+    `;
+
+    let styleLegendItemMarkerFile = `
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width: 50px;
+        border: 2px solid #ccc;
+        border-radius:6px;
+        background-color: #fff;
+        color: #000;
+        font-size:12px;
+        
+        
+    `;
+
+     let styleLegendItemMarkerDisc = `
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width: 50px;
+        border: 2px solid #4CAF50;
+        border-radius:6px;
+        background-color: #fff;
+        color: #000;
+        font-size:12px;
+        
+    `;
+
+     let styleLegendItemMarkerTag = `
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        width: 50px;
+        border: 2px solid #4CAF50;
+        border-radius:6px;
+        background-color: #4CAF50;
+        color: #fff;
+        font-size:12px;
+        
+    `;
+
+    let styleLegendItemSep = `
+        color: #000;
+    `;
+
+    let styleLegendItemTitle = `
+        flex-grow:1;
+        color: #000;
+        font-size:12px;
+      `;
+
+    let legend = `
+        <div style="${styleLegend}">
+            <div style="${styleLegendItem}">
+                <div style="${styleLegendItemMarkerFile}">текст</div>
+                <div style="${styleLegendItemSep}">-</div>
+                <div style="${styleLegendItemTitle}">материал</div>
+            </div>
+            <div style="${styleLegendItem}">
+                <div style="${styleLegendItemMarkerDisc}">текст</div>
+                <div style="${styleLegendItemSep}">-</div>
+                <div style="${styleLegendItemTitle}">дисциплина</div>
+            </div>
+            <div style="${styleLegendItem}">
+                <div style="${styleLegendItemMarkerTag}">текст</div>
+                <div style="${styleLegendItemSep}">-</div>
+                <div style="${styleLegendItemTitle}">ключевое слово</div>
+            </div>
+            
+        </div>`;
+    
+    (function() {
+
+        // Первоначальные данные, пришедшие при открытии модалки
+        const initialData = {{ graph | tojson }};
+        
+        let contentModal = document.querySelector('#modal-body');
+        let treeContainer = document.querySelector('#tree-container');
+         if (treeContainer) {
+            treeContainer.insertAdjacentHTML('beforeend', legend);
+        }
+
+        const rect = contentModal.getBoundingClientRect();
+        const dynamicWidth = (rect.width - 48) || 800;   
+        const dynamicHeight = rect.height || 500;
+        const cardWidth = 200;
+        //const cardHeight = 45;
+
+        const svg = d3.select("#tree-svg")
+            .style("width", "100%")
+            .style("height", "99%")
+            .attr("viewBox", `0 0 ${dynamicWidth} ${dynamicHeight}`);
+
+        // Основная функция отрисовки (вызывается при каждом обновлении)
+        async function drawGraph(treeData) {
+            // Полностью очищаем холст перед перерисовкой
+            svg.selectAll("*").remove();
+
+            // Создаем базовую группу для зума
+            const g = svg.append("g");
+
+            const zoom = d3.zoom()
+                .scaleExtent([0.1, 10]) 
+                .on("zoom", (event) => g.attr("transform", event.transform));
+
+            svg.call(zoom);             
+            
+            // Задаем корень и иерархию
+            const root = d3.hierarchy(treeData);
+            const leavesCount = root.leaves().length;
+            const verticalSpace = Math.max(dynamicHeight - 60, leavesCount * 60);
+
+            const tree = d3.tree().size([verticalSpace, dynamicWidth - 440]);
+            tree(root);
+
+            // Центрируем граф при старте
+            const initialTransform = d3.zoomIdentity.translate(260, 40).scale(0.9);
+            svg.call(zoom.transform, initialTransform);
+
+            g.selectAll(".link")
+                .data(root.links())
+                .enter().append("path")
+                .attr("class", "link")
+                .attr("fill", "none")
+                .attr("stroke", "#ccc")
+                .attr("stroke-width", 2)
+                .attr("d", d3.linkHorizontal().x(d => d.y).y(d => d.x));
+
+            const node = g.selectAll(".node")
+                .data(root.descendants())
+                .enter().append("g")
+                .attr("class", "node")
+                .attr("transform", d => `translate(${d.y},${d.x})`);
+            
+            
+            node.append("circle")
+                .attr("r", 6)
+                .attr("fill", d => d.children ? "#555" : "#999");
+
+            
+            const fo = node.append("foreignObject")
+                .attr("x", d => d.children ? -(cardWidth + 15) : 15)
+                .attr("y", -12) 
+                //.attr("y", -cardHeight / 2) 
+                .attr("width", cardWidth)
+                .attr("height", 500);
+
+            const cardBody = fo.append("xhtml:div")
+                .style("width", "100%")
+                .style("height", "auto")
+                .style("box-sizing", "border-box")
+                .style("padding", "6px")
+                .style("border-radius", "5px")
+                // Меняем цвет рамки в зависимости от типа: дисциплина - синяя, файл - красная
+                .style("border", d => d.data.type === 'tag'? "2px solid #4CAF50" :"2px solid #e0e0e0")
+                .style("background-color", d => {
+                    if (d.data.type === 'tag' && d.data.keyword) {
+                        return "#4CAF50"; // Темно-зеленая рамка
+                    } else {
+                        return "#ffffff";
+                    }
+                })
+                .style("color", d => {
+                    if (d.data.type === 'tag' && d.data.keyword) {
+                        return "#fff"; // Темно-зеленая рамка
+                    } else {
+                        return "#000";
+                    }
+                })
+                
+                     
+                //.style("border", d => d.data.type === 'tag' ? "2px solid #4CAF50" : "2px solid  #e0e0e0")       
+                
+                
+                .style("font-family", "sans-serif")
+                .style("font-size", "11px")
+                .style("line-height", "1.2")
+                .style("display", "flex")
+                .style("align-items", "center")         
+                .style("justify-content", d => d.children ? "flex-end" : "flex-start") 
+                .style("text-align", d => d.children ? "right" : "left")
+                .style("word-break", "break-word")      
+                .style("cursor", "pointer") // Делаем карточку кликабельной
+                .style("user-select", "none");
+            
+            cardBody.text(d => d.data.name);
+
+            // КЛИК ПО УЗЛУ: Интерактивная смена корня дерева
+            cardBody.on("click", async (event, d) => {
+                // Если кликнули по текущему корню (самый первый элемент), ничего не делаем
+                if (!d.parent) return; 
+
+                const nextId = d.data.id;
+                const nextType = d.data.type; // "discipline" или "file"
+
+                // Показываем мини-лоадер поверх графа на время запроса
+                event.target.style.opacity = "0.5"
+                event.target.innerText = "Загрузка..."
+
+                try {
+                    const response = await fetch(`/api/graph/${nextType}/${nextId}/json`);
+                    if (!response.ok) throw new Error();
+                    const newData = await response.json();
+                    
+                    // РЕКУРСИВНЫЙ ПЕРЕРИСОВКА: вызываем эту же функцию с новыми данными!
+                    drawGraph(newData);
+                } catch (err) {
+                    alert("Не удалось загрузить данные для этого узла");
+                    event.target.style.opacity = "1"
+                    event.target.innerText = d.data.name
+                    
+                }
+            });
+        }
+
+        // Первый запуск при открытии модального окна
+        drawGraph(initialData);
+    })();
+</script>
+

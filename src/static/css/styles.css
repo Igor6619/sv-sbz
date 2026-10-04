@@ -1,0 +1,34 @@
+.container-column {
+  display: grid;
+  grid-template-columns: 1fr; /* Одна колонка */
+  gap: 10px;  /*Опционально: добавляет отступы между элементами */
+}
+
+.tree, .tree ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+.tree li {
+    margin: 5px 0;
+    position: relative;
+}
+.tree-checkbox {
+    margin-right: 5px;
+}
+.toggle-children {
+    cursor: pointer;
+    margin-right: 5px;
+    user-select: none;
+    display: inline-block;
+    width: 15px;
+    text-align: center;
+}
+.children-container {
+    display: none;
+}
+.children-container.expanded {
+    display: block;
+}
+.tree-item-label {
+    cursor: pointer;
+}

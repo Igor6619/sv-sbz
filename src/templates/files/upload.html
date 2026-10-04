@@ -1,0 +1,114 @@
+{% extends "base_with_login.html" %}
+
+{% block title %}Добавление файла{% endblock title %}
+
+{% block static_file %}
+<script src="../static/js/file_add.js" defer></script>
+<link rel="stylesheet" type="text/css" href="../static/css/add_file.css" />
+
+{% endblock static_file %}
+
+{% block content %}
+<div class="content-wrapper">
+    <h1 class="page-title"> Добавление материала в базу знаний</h1>
+
+    <form method="post" action="{{request.url_for('upload_file_page')}}" enctype="multipart/form-data">
+        <div class="form-grid">
+            <!-- Left Column - Main Info -->
+            <div>
+                <div class="form-section">
+                    <h3 class="section-title">Основная информация</h3>
+
+                    <label class="form-label" for="name">Наименование файла</label>
+                    <input class="form-input" type="text" id="name" name="name" placeholder="Введите название материала"
+                        required>
+
+                    <label class="form-label" for="description">Описание файла</label>
+                    <textarea class="form-input" id="description" name="description"
+                        placeholder="Кратко опишите содержимое файла" required></textarea>
+
+                    <label class="form-label" for="keywords">Ключевые слова</label>
+                    <textarea class="form-input" id="keywords" name="keywords"
+                        placeholder="Введите ключевые слова через запятую"></textarea>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-title">Параметры файла</h3>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="is_private" name="is_private">
+                        <label class="checkbox-label" for="is_private">Личный файл (доступен только мне)</label>
+                    </div>
+
+                    <label class="form-label" for="file_type">Тип файла</label>
+                    <select class="form-input" id="file_type" name="file_type" required>
+                        {% for file_type in file_types %}
+                        <option value="{{ file_type.id }}">{{ file_type.name }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <label class="form-label" for="file">Файл</label>
+                    <input class="form-input" type="file" id="file" name="file" required>
+
+                    <button type="submit" class="submit-btn">Сохранить материал</button>
+                    <button type="submit" class="submit-btn">Изменить содержимое</button>
+                </div>
+            </div>
+
+            <!-- Right Column - Categories -->
+            <div>
+                <div class="form-section">
+                    <h3 class="section-title">Категории и теги</h3>
+                    <div class="tree-container">
+                        {% for main_tag in main_tags %}
+                        <h4>{{ main_tag.name }}</h4>
+                        <ul class="tree">
+                            {% macro render_tree(tags) %}
+                            {% for item in tags %}
+                            <li class="tree-item">
+                                <input type="checkbox" class="tree-checkbox" id="tag_{{ item.id }}" name="tags"
+                                    value="{{ item.id }}">
+                                <label for="tag_{{ item.id }}" class="tree-label">
+                                    {{ item.name }}
+                                    {% if item.children %}
+                                    <span class="toggle-btn" onclick="toggleTreeItem(this)">+</span>
+                                    {% endif %}
+                                </label>
+                                {% if item.children %}
+                                <ul class="children-list">
+                                    {{ render_tree(item.children) }}
+                                </ul>
+                                {% endif %}
+                            </li>
+                            {% endfor %}
+                            {% endmacro %}
+                            {{ render_tree(main_tag.children) }}
+                        </ul>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3 class="section-title">Дисциплины</h3>
+                    <div class="multiselect-container">
+                        <label class="form-label" for="disciplines">Выберите связанные дисциплины:</label>
+                        <select class="multiselect" id="disciplines" name="tags" multiple>
+                            {% for discipline in disciplines %}
+                            <option value="{{ discipline.id }}">{{ discipline.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    function toggleTreeItem(button) {
+        const childrenList = button.parentElement.nextElementSibling;
+        childrenList.classList.toggle('expanded');
+        button.textContent = childrenList.classList.contains('expanded') ? '−' : '+';
+    }
+</script>
+{% endblock content %}

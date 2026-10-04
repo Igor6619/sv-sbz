@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Biblio launcher
+Type=Application
+NoDisplay=false
+Exec=/opt/rio/spo/biblio/beditor/biblio_launcher.run %u
+Hidden=false
+Terminal=false
+StartupNotify=false
+MimeType=x-scheme-handler/biblio-launcher

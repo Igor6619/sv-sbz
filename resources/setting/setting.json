@@ -1,0 +1,21 @@
+{
+  "auth.client": {
+    "url": "${AUTH_SERVICE_URL}",
+    "version": "1",
+    "public_key": null,
+    "min_jwt_balance_sec": 300,
+    "trusted": {
+      "auth": null,
+      "enable": false,
+      "white_list": null
+    }
+  },
+  "sbz": {
+    "files_path": "${STORAGE_FILES_PATH}"
+  },
+  "cors": {
+    "allow_origins": [
+      "*"
+    ]
+  }
+}

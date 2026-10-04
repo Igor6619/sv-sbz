@@ -1,0 +1,62 @@
+#search-input {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 16px;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.suggestions-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 4px 0 0 0;
+    padding: 0;
+    list-style: none;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-height: 300px;
+    overflow-y: auto;
+    z-index: 1000;
+    display: none;
+}
+
+.suggestions-list.visible {
+    display: block;
+}
+
+.suggestions-list li {
+    padding: 10px 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.1s;
+}
+
+.suggestions-list li:hover,
+.suggestions-list li.active {
+    background: var(--light-gray);
+}
+
+.suggestions-list li .query-text {
+    flex: 1;
+}
+
+.suggestions-list li .count {
+    font-size: 12px;
+    color: #888;
+    margin-left: 10px;
+}
+
+/* Подсветка совпавшей части */
+.suggestions-list li mark {
+    background: var(--primary-ultralight);
+    color: inherit;
+    padding: 0;
+    border-radius: 2px;
+}

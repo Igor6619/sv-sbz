@@ -1,0 +1,6 @@
+[submodule "src/utils/sbz"]
+	path = src/utils/sbz
+	url = http://172.31.21.250:81/bk_tos/theory/sbz/sbz.git
+[submodule "src/utils/service"]
+	path = src/utils/service
+	url = http://172.31.21.250:81/bk_tos/pup/platform/service.git

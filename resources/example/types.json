@@ -1,0 +1,151 @@
+[
+  {
+    "id": "81708366-64e8-41fc-a9ba-6e258a45f492",
+    "name": "Электронный учебник",
+    "code": "document",
+    "extensions": [
+      ".pdf",
+      ".docx",
+      ".doc",
+      ".txt",
+      ".rtf",
+      ".ods",
+      ".odt",
+      ".xls", 
+      ".xlsx"
+    ]
+  },
+  {
+    "id": "9161d0d3-09fc-4c00-820d-2e0dc68be3c3",
+    "name": "УТК",
+    "code": "utk"
+  },
+  {
+    "id": "09944b21-095d-4766-a1a2-58a34f9fdd57",
+    "name": "Руководство",
+    "code": "manual"
+  },
+  {
+    "id": "dadaf4a9-c560-4669-a5cc-49c64874958b",
+    "name": "Презентация",
+    "code": "presentation",
+    "extensions": [
+      ".ppt",
+      ".pptx",
+      ".odp"
+    ]
+  },
+  {
+    "id": "520078cd-f112-4a40-8108-1593031de1e3",
+    "name": "Фото",
+    "code": "image",
+    "extensions": [
+      ".jpg",
+      ".jpeg",
+      ".png",
+      ".webp",
+      ".gif",
+      ".tiff",
+      ".raw",
+      ".cr2",
+      ".nef",
+      ".bmp",
+      ".ico",
+      ".avif"
+    ]
+  },
+  {
+    "id": "0e10865c-b05b-40a1-93e4-497d7dab58ab",
+    "name": "Видео",
+    "code": "video",
+    "extensions": [
+      ".webm",
+      ".mkv",
+      ".flv",
+      ".flv",
+      ".vob",
+      ".ogv",
+      ".ogg",
+      ".drc",
+      ".gifv",
+      ".mng",
+      ".avi",
+      ".mts",
+      ".m2ts",
+      ".ts",
+      ".mov",
+      ".qt",
+      ".wmv",
+      ".yuv",
+      ".rm",
+      ".rmvb",
+      ".viv",
+      ".asf",
+      ".amv",
+      ".mp4",
+      ".m4v",
+      ".mpg",
+      ".mp2",
+      ".mpeg",
+      ".mpe",
+      ".mpv",
+      ".mpg",
+      ".mpeg",
+      ".m2v",
+      ".m4v",
+      ".svi",
+      ".3gp",
+      ".3g2",
+      ".mxf",
+      ".roq",
+      ".nsv",
+      ".flv",
+      ".f4v",
+      ".f4p",
+      ".f4a",
+      ".f4b"
+    ]
+  },
+  {
+    "id": "23b7c773-b86b-45bf-ae31-7d9865bb5036",
+    "name": "Аудио",
+    "code": "audio",
+    "extensions": [
+      ".wav",
+      ".mp3"
+    ]
+  },
+  {
+    "id": "be819e5d-92d5-48a1-9284-dd201ab58670",
+    "name": "3D модель",
+    "code": "3d",
+    "extensions": [
+      ".glb"
+    ]
+  },
+  {
+    "id": "55c9dd0f-fd78-4eb7-8373-c72ffa4ed292",
+    "name": "Видео 360",
+    "code": "video_360"
+  },
+  {
+    "id": "4a719a9a-a342-4ecf-92d2-bdcb22282a2c",
+    "name": "ФРКП",
+    "code": "frkp"
+  },
+  {
+    "id": "247991a6-b8f4-4465-840e-4c2c74648d6e", 
+    "name": "Сценарий ситуационной задачи",
+    "code": "gis.situational_task"
+  }, 
+  {
+    "id": "cff6a65a-ca84-4392-b859-507dbc4bf6b5", 
+    "name": "Сценарий тактической летучки",
+    "code": "gis.tactical_exercise"
+  },
+  {
+    "id": "d04a5141-8e20-4e87-bf07-a6c55792e39a",
+    "name": "Разное",
+    "default": true
+  }
+]

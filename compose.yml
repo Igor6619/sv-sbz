@@ -1,0 +1,40 @@
+volumes:
+  pg-sbz-data:
+  sbz-storage:
+networks:
+  sbz-network:
+    driver: bridge
+services:
+  sbz: 
+    restart: always
+    build: .
+    container_name: sbz
+    ports: 
+      - 8075:80
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - sbz-network
+    volumes:
+      - "sbz-storage:/var/sbz"
+    env_file:
+      - resources/env/docker.env
+    links:
+      - sbz-db
+    depends_on:
+      - sbz-db
+  sbz-db:
+    restart: always
+    image: postgres:9.6
+    container_name: sbz-db
+    env_file:
+      - resources/env/docker.env
+    ports:
+     - 5732:5432
+    volumes:
+     - "pg-sbz-data:/var/lib/postgresql/data"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - sbz-network
+

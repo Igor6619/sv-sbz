@@ -1,0 +1,9 @@
+<div style="text-align: center;">
+    {% if user %}
+    {{ user.short_name }}
+    <br />
+    <a href="/logout">Выйти</a>
+    {% else %}
+    <a href="/login">Войти</a>
+    {% endif %}
+</div>

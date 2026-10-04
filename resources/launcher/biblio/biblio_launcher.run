@@ -1,0 +1,6 @@
+#!/bin/bash
+
+FULL_URL="$1"
+UUID="${FULL_URL#biblio-launcher://}"
+
+/opt/rio/spo/biblio/beditor/beditor "/home/user/Загрузки/${UUID}.bdt"

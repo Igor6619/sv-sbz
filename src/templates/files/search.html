@@ -1,0 +1,264 @@
+{% extends "base_with_login.html" %}
+
+{% block title %}Поиск{% endblock title %}
+
+{% block static_file %}
+<!-- Логика страницы -->
+<link rel="stylesheet" type="text/css" href="../static/css/file_search.css" />
+<link rel="stylesheet" type="text/css" href="../static/css/search_query.css" />
+<script src="../static/js/file_search.js" defer></script>
+<script src="../static/js/utils.js" defer></script>
+<script src="../static/js/search_query.js" defer></script>
+
+<!-- Для pdf -->
+<script src="../static/js/libs/pdf/pdf.min.js"></script>
+<script src="../static/js/viewers/pdf.js"></script>
+
+<!-- Для glb, video 360, picture 360 -->
+<script src="../static/js/libs/glb/three.min.js"></script>
+<script src="../static/js/libs/glb/GLTFLoader.js"></script>
+<script src="../static/js/libs/glb/OrbitControls.js"></script>
+<script src="../static/js/libs/glb/dat.gui.min.js"></script>
+<script src="../static/js/viewers/glb.js"></script>
+<script src="../static/js/viewers/video_360.js"></script>
+<script src="../static/js/viewers/picture_360.js"></script>
+
+<!-- Для xlsx -->
+<script src="../static/js/libs/xlsl/xlsx.full.min.js"></script>
+<script src="../static/js/viewers/xlsl.js"></script>
+
+<!-- Для pptx -->
+<link rel="stylesheet" type="text/css" href="../static/css/pptx/nv.d3.min.css" />
+<link rel="stylesheet" type="text/css" href="../static/css/pptx/pptxjs.css" />
+
+<script type="text/javascript" src="../static/js/libs/pptx/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="../static/js/libs/pptx/jszip.min.js"></script>
+<script type="text/javascript" src="../static/js/libs/pptx/filereader.js"></script>
+<script type="text/javascript" src="../static/js/libs/pptx/d3.min.js"></script>
+<script type="text/javascript" src="../static/js/libs/pptx/nv.d3.min.js"></script>
+<script type="text/javascript" src="../static/js/libs/pptx/pptxjs.js"></script>
+<script type="text/javascript" src="../static/js/libs/pptx/divs2slides.js"></script>
+<script type="text/javascript" src="../static/js/libs/pptx/jquery.fullscreen-min.js"></script>
+
+<script src="../static/js/viewers/pptx.js"></script>
+
+<!-- Для аудио -->
+<script src="../static/js/viewers/audio.js"></script>
+<link rel="stylesheet" type="text/css" href="../static/css/audio.css" />
+
+<!-- Для СПО Библио -->
+<script src="../static/js/viewers/biblio.js"></script>
+{% endblock static_file %}
+
+{% block content %}
+<header>
+    <form method="GET" action="{{ request.url_for('search_files_page') }}">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <span class="logo-icon">📚</span>
+                    Специализированная база знаний
+                </div>
+
+                <div class="search-container">
+                    <div class="search-form">
+                        <input
+                            type="text"
+                            id="search-input"
+                            name="value"
+                            class="search-input"
+                            placeholder="Поиск учебных материалов..."
+                            value="{% if filters.value is not none %}{{ filters['value']}}{%endif%}"
+                            autocomplete="off"
+                            aria-autocomplete="list"
+                            aria-controls="suggestions-list"
+                            data-omni-voice-input="voice_input" 
+                            data-omni-tts-clear-on-start
+                        />
+                        <script>
+                            document.addEventListener("omni:dictation-complete", function (e) {
+                                document.getElementsByClassName("search-button")[0].click();
+                                //console.log("Dictation:", e.detail.text);
+                            });
+                        </script>
+                        <button type="submit" class="search-button">Найти</button>
+                    </div>
+                    <ul id="suggestions-list" class="suggestions-list" role="listbox"></ul>
+                </div>
+
+                <div class="container advanced-filters">
+                    <section class="advanced-filters__section  advanced-filters__section-main-criteries">
+                        <div class="filter-group section-main-criteries__item">
+                            <label class="filter-label">Тип поиска</label>
+                            <select name="search_type" class="filter-select">
+                                {% for type_search in types_search %}
+                                <option value="{{ type_search.type }}" {% if type_search.type==filters.search_type
+                                    %}selected{% endif %}>{{type_search.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="filter-group section-main-criteries__item">
+                            <label class="filter-label">Тип контента</label>
+                            <select name="type" class="filter-select">
+                                <option value="">Типы</option>
+                                {% for file_type in file_types %}
+                                <option value="{{ file_type.id }}" {% if filters.type | string==file_type.id | string
+                                    %}selected{%endif%}>{{file_type.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        
+                        <div class="filter-group section-main-criteries__item">
+                            <label class="filter-label">Дисциплины</label>
+                            <select name="discipline" class="filter-select" >
+                                <option value="">Дисциплины</option>
+                                {% for discipline in disciplines%}
+                                <option value="{{ discipline.id }}" {% if filters.discipline==discipline.id | string
+                                    %}selected{%endif%}>{{discipline.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                        <div class="section-main-criteries__item-open-additional-criteries filter-group">
+                            
+                            <div class="gmb-menu" title="Скрыть/Отобразить дополнительные критерии...">
+                                
+                            </div>
+                        </div>
+                    </section>
+                    <section class="advanced-filters__section advanced-filters__section-additional-criteries advanced-filters__section_collapsed">
+                        <div class="filter-group">
+                        <label class="filter-label">Аппаратные</label>
+                        <select name="equipment" class="filter-select">
+                            <option value="">Аппаратные</option>
+                            {% for group in equipments %}
+                            <optgroup label="{{ group.name }}">
+                                {% for item in group.children %}
+                                <option value="{{ item.id }}" {% if filters.equipment==item.id | string %}selected{%
+                                    endif %}>{{ item.name }}</option>
+                                {% endfor %}
+                            </optgroup>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    </section>
+                    <section class="advanced-filters__section advanced-filters__section-buttons-bar">
+                        <div class="filter-group section-buttons-bar__item" style="margin-bottom:0px;">
+                            {% if is_file_adm %}
+                            <a href="{{ request.url_for('upload_file_page') }}" target="_blank" style="margin-bottom:0px;"
+                                class="action-btn view-btn add-button ">Добавить материал</a>
+                            {%else%}
+                            <span href="" style="margin-bottom:0px;" class="action-btn view-btn add-button "
+                                disabled>Добавить материал</span>
+                            {% endif %}
+
+                        </div>
+                        <div class="filter-group section-buttons-bar__item" style="margin-bottom:0px;">
+
+                            <a href="#" style="margin-bottom:0px;" class="action-btn view-btn add-button"> Сохранить
+                                фильтр</a>
+                        </div>
+                        <div class="filter-group section-buttons-bar__item" style="margin-bottom:0px;">
+
+                            <a href="#" style="margin-bottom:0px;" class="action-btn view-btn add-button"> Выбрать фильтр
+                            </a>
+                        </div>
+                        <div class="filter-group section-buttons-bar__item" style="margin-bottom:0px;">
+
+                            <a href="/files" style="margin-bottom:0px;" class="action-btn view-btn add-button "> Сбросить
+                                фильтр</a>
+
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </form>
+</header>
+
+<div class="container">
+    {% if filters.value is not none %}
+    <div class="content-results">
+        <span  class="result-title">AI поиск</span>
+        
+        <omni-embed-element 
+            code="sbz_search" 
+                search-query="{{ filters['value']}}"
+        ></omni-embed-element>
+    </div>
+    {%endif%}
+    
+    
+    <div class="content-results">
+        {% for file in files %}
+        <div class="result-item" style="display:flex;">
+            <div class="result-content" style="display:flex; width: 60%; ">
+                <a class="result-title" data-url_download="{{ url_for('api_download_file', id=file.id) }}"
+                    data-file-id="{{ file.id }}" data-file_ext="{{ file.content.extension }}"
+                    data-is_360="{{ file| is_360 }}" onclick="openModal(this)">{{ file.name }}</a>
+                <p class="result-description" data-omni-tts="voice_output">{{ file.description }}</p>
+                <div class="result-meta">
+                    <a href="/files?type={{file.type.id}}" class="result-type">{{ file.type.name }}</a>
+                    <span>{{ file.created | format_date}} · {{ file | count_show}} просмотров</span>
+                </div>
+                <div class="result-actions">
+                    <button class="action-btn view-btn"
+                        data-url_download="{{ url_for('api_download_file', id=file.id) }}" 
+                        data-file-id="{{ file.id }}"
+                        data-file_ext="{{ file.content.extension }}" 
+                        data-is_360="{{ file| is_360 }}"
+                        onclick="openModal(this)">
+                        Просмотр
+                    </button>
+                    <a href="{{ url_for('api_download_file', id=file.id) }}"
+                        class="action-btn download-btn off-underline_a" target="_blank">Скачать</a>
+                    {% if is_file_adm %}
+                    <a href="{{ request.url_for('update_file_page') }}?id={{file.id}}"
+                        class="action-btn view-btn off-underline_a">Редактировать</a>
+                    {%else%}
+                    <button class="action-btn view-btn">
+                        Редактировать
+                    </button>
+                    {% endif %}
+                    <button class="action-btn view-btn"
+                        data-url_get_graph="{{ url_for('api_graph', id=file.id, node_type='file') }}"
+                        data-file-id="{{ file.id }}"
+                        onclick="openModalWhithGraph(this)">
+                        Граф
+                    </button>
+
+                </div>
+            </div>
+            <div class="" style="width: 40%; display: flex; flex-wrap: wrap; align-items: flex-start; column-gap: 2px;">
+                {% for tag in file.tags %}
+                <a href="/files?tags={{tag.id}}" class="result-type">{{ tag.name }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- Модальное окно для просмотра контента -->
+<div id="contentModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <div id="modal-header">
+            
+            <h2 id="modal-title"></h2>
+            <div id="modal-meta"></div>
+        </div>
+        <div id="modal-body" >
+            <!-- Контент будет загружаться динамически -->
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container">
+        <p>© Специализированная база знаний</p>
+    </div>
+</footer>
+
+{% endblock content %}

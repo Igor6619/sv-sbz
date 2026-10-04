@@ -1,0 +1,1141 @@
+[
+    {
+        "id": "2e957ee0-1e8e-49d8-9537-a1eac438099d",
+        "name": "Аппаратные",
+        "code": "equipments",
+        "keyword": false,
+        "children": [
+            {
+                "id": "f8a721f1-d3d4-4c75-8b97-02941d34b67b",
+                "name": "Командно-штабные машины",
+                "code": null,
+                "keyword": false,
+                "children": [
+                    {
+                        "id": "8d7fd05a-ddf6-4c56-a24a-8d4acfd4b32a",
+                        "name": "Р-149АКШ1",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "b9786d2a-26f1-4baf-9248-bd76713f9358",
+                        "name": "Р-149МА1-01",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "800e1205-c4ea-4285-ad5f-05e8f93fb363",
+                        "name": "Р-149МА1-18",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "76b3989c-6433-4175-9d27-3756bb235f29",
+                        "name": "Р-149МА1-19",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "ae554dd4-feae-4ecf-b8bb-f58789cc6dc1",
+                        "name": "Р-177М Азалия",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "1f20004f-ae4d-4683-9155-c37365ccfac0",
+                        "name": "Р-199Д",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "261c2155-1a92-472a-8deb-260955475409",
+                "name": "Комплекс видеотелефонной связи и передачи данных",
+                "code": null,
+                "keyword": false,
+                "children": [
+                    {
+                        "id": "7249c758-e45f-4221-b92f-9ea7a8e26d16",
+                        "name": "МКС(П)",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "9697e074-a4c9-4296-98b4-93ec046cfe31",
+                        "name": "Р-797-2",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "46fa3913-11da-489e-9596-e765ba181cfa",
+                        "name": "П-317Д",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "b4b99c7b-4363-4705-961a-ee4fd5a5008d",
+                "name": "Комплесные аппаратные связи",
+                "code": null,
+                "keyword": false,
+                "children": [
+                    {
+                        "id": "ced02ef3-94de-4f3a-8317-ea44df34e72c",
+                        "name": "Аппаратная Орхидея-1",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "3810509d-da7a-4bc6-850d-b893d8fb82ca",
+                        "name": "К-8М",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "ed942745-ed97-4dde-ac1f-9e854952f503",
+                        "name": "МП-1ИМ",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "d77a2f47-2275-4a3c-b00d-ccbdfc33a822",
+                        "name": "МП-2ИМ",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "b41807a6-3256-4017-8b68-0ebbf2c91b7f",
+                        "name": "МП-2ИМ-03",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "3b954874-f043-4210-96b7-6151f0548093",
+                        "name": "МП-2ИМ-04",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "63bc8593-b667-49c7-a3db-f48a9d80c33d",
+                        "name": "П-240И-7",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "7e03378d-f12e-4091-8487-2d34d690b221",
+                        "name": "П-244И-6",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "1a00fb2e-0c74-452c-9c7a-44a062c74a58",
+                        "name": "П-260-О",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "f3c7d80d-bfd3-45ec-909c-c4f4490293a7",
+                        "name": "П-260-Т",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "d60d0b23-6fb1-4eb8-822e-de80d4930930",
+                        "name": "П-260-У",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "3feb4ca8-5434-45bb-90d3-2e20743906a8",
+                        "name": "П-537УМ",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "df242ec6-f9d8-462c-84a7-f143b64cad30",
+                        "name": "Р-849М1(М)",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "66ff7ecf-c91d-407e-8ece-fafea0bd7aa2",
+                "name": "Радиоприемные устройства",
+                "code": null,
+                "keyword": false,
+                "children": [
+                    {
+                        "id": "39b2b04c-082d-4c8d-b0e4-c2cf1958009c",
+                        "name": "Р-170П",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "acb1efef-e3cb-4bec-9cdc-2f5266f59f4f",
+                "name": "Радиорелейные станции",
+                "code": null,
+                "keyword": false,
+                "children": [
+                    {
+                        "id": "5d4488d7-4355-4bda-8940-f153c0403df0",
+                        "name": "ЛР-Д",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "6c03d926-52ee-4e9a-a953-53015caa0268",
+                        "name": "ЛР-Д-02",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "8d929493-7727-4bd4-a884-0850d0ecbbde",
+                        "name": "Р-416ГМ",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "f134c396-ed67-4867-bac5-f0149ca55f4f",
+                        "name": "Р-416ГМ2",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "2f47f906-f3c5-43d0-a5cc-ed150db84805",
+                        "name": "Р-419Л1М",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "ffd8c149-6352-4f2b-8286-6304f02a8daf",
+                        "name": "Р-419МП",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "c0abd2c1-9460-47ab-9f4f-8cf86e2d164c",
+                        "name": "Р-431АМ",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "5b6930fa-d962-4b03-8af5-a00e3368781c",
+                        "name": "Р-431С",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "897c2b5b-6966-4df8-a533-69e07e89bc15",
+                "name": "Радиостанции большой мощности",
+                "code": null,
+                "keyword": false,
+                "children": [
+                    {
+                        "id": "3ce709f1-6a6d-400c-a7bf-47b380292f15",
+                        "name": "Р-176-5А",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "2d48e07f-6281-454c-8683-4c1f04b15543",
+                        "name": "АРПС-20",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "796bfbcc-eadc-4e57-9a8e-cd3e6b7f804d",
+                "name": "Радиостанции малой мощности",
+                "code": null,
+                "keyword": false,
+                "children": [
+                    {
+                        "id": "16e772e3-f943-4e2c-bce4-906a906c7a72",
+                        "name": "ПАР-10МА",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "f778bd77-7e0a-47e1-a6da-0912ef138ceb",
+                        "name": "Р-187-В",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "ffb4f134-8168-4448-8449-bdd739ff9c33",
+                        "name": "Р-997-1М",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "5a6afb6b-599e-4383-9c96-0289a19082db",
+                        "name": "Азарт-УН",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "2e92039d-6b5b-4a5a-a518-a45308d44622",
+                        "name": "Р-187-Н",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "c2f2ebcc-70fb-4416-a3a5-3efa5e930712",
+                        "name": "Р-187-П1",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "4775af19-8aac-4435-b37d-0b7eaf4ad86a",
+                        "name": "ПАР-10МС",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "12d31ef0-1285-46aa-956c-00d142f9371a",
+                        "name": "Р-620",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "c32414d3-02f6-4fdb-919e-4087056902b2",
+                        "name": "Р-997-1Б",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "b314845b-862d-4a9b-ae60-69e45d4d91e1",
+                "name": "Радиостанции средней мощности",
+                "code": null,
+                "keyword": false,
+                "children": [
+                    {
+                        "id": "8558a00f-a4e1-44e4-8d56-ec93609e562e",
+                        "name": "P-176-1A",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "85d97598-4976-4667-aa86-b096ecb5ea7a",
+                        "name": "Р-176-ПУ",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "54329b57-a3da-46a3-a086-1ea0085950a6",
+                        "name": "Р-176-У",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "9792568f-7e6e-486c-bceb-ef8e8f4c1f8d",
+                        "name": "Р-177Д",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "cb35dbc8-d9c0-443e-8f43-94ddf0aa556c",
+                        "name": "Р-646",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "88066a34-a64e-4a37-995c-7f7202115fcf",
+                        "name": "Р-646М1",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "a863cc79-4ef0-4e40-80c2-24700f08b6bf",
+                        "name": "Р-649",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "c848fb91-3066-4eb8-93e4-c746146a8327",
+                        "name": "Р-673",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "17097a4d-5239-469c-b1fd-b1b4ce48cba1",
+                        "name": "Р-693",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "e210f517-a23d-480a-80a3-4f94f5365885",
+                "name": "Станции спутниковой связи",
+                "code": null,
+                "keyword": false,
+                "children": [
+                    {
+                        "id": "a69d9057-7368-40c6-8a30-e6a70e4d81fb",
+                        "name": "Р-433Д",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "33a0eb12-9167-4f16-ac93-33918cb39514",
+                        "name": "Р-441-ОВ",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "9bc2c9c3-0341-467b-a063-aa1325360fbb",
+                        "name": "Р-441-УВ",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "5f539892-4610-46a6-a02b-039cf63a963c",
+                        "name": "Р-441-УВК",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "21c3a847-8e04-40eb-bd94-3ce8148854d0",
+                        "name": "Р-444-Д",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "37f2ebed-0ba3-4230-aff9-835255ec11b3",
+                        "name": "Р-444-ПТД",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "4327c769-d80f-4adf-9846-b2ce203dfcff",
+                        "name": "Р-448",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "707c13d3-1d7f-47aa-8fb5-108b0a42573b",
+                        "name": "Р-448-ЦП",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "de5bfb53-1022-452e-acc5-24a6ccc40062",
+                        "name": "Р-444-НЛ",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "26e5f7ea-82ea-47be-a96d-43e7d0b84262",
+                        "name": "Р-444-НМ",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "c34a133c-64ce-402f-a0bd-a4e3c25e1d48",
+                        "name": "Р-444-ПТН",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "fef1adfa-a63d-4448-a382-9179f4aad635",
+                        "name": "Р-448-ТН вар. 1.1",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "e60c9f79-cfcf-40b4-982f-4dc4e0710881",
+                        "name": "Р-448-ТН вар. 2.21",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "13203649-4a28-4530-b1fb-8f4d51f8028a",
+                        "name": "Р-448-ТН вар. 3.22",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "3a169c3a-7e6d-4f8f-9a82-7bbfde2c9557",
+                        "name": "Р-441УВС",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    },
+                    {
+                        "id": "a500f652-edfd-4824-ad3d-cf6d7e0f0be9",
+                        "name": "Р-448-ЦС",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "id": "ba81d9a8-4ced-409b-b2bb-29045cd119e6",
+                "name": "Станции тропосферной связи",
+                "code": null,
+                "keyword": false,
+                "children": [
+                    {
+                        "id": "2feaaac3-117a-42a4-be8c-3e909df427a9",
+                        "name": "Р-423-АМК",
+                        "code": null,
+                        "keyword": false,
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "9d0f17bb-f5ce-4a78-972e-1c94c8df76b0",
+        "name": "Дисциплины",
+        "code": "disciplines",
+        "keyword": false,
+        "children": [
+            {
+                "id": "62515c32-8bc2-4c90-b9b6-ae1cf7afb750",
+                "name": "История",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "297c8a69-cbd2-4968-9a6b-dec69d633b3d",
+                "name": "Философия",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "7b5296bd-e9d4-4dae-b1a7-5a8043b076c2",
+                "name": "Иностранный язык",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "5951ce19-aee4-48de-88cb-daab93e94598",
+                "name": "Правоведение",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "ff5f98e2-7b45-46c5-bec4-40560e05ace8",
+                "name": "Социология",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "b0acd804-2f27-4e99-971f-7d0c19dd574f",
+                "name": "Организация и управление предприятиями",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "51a4e0a7-4c9a-4119-b11c-a24323fefe99",
+                "name": "Высшая математика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "d8e0e4b0-def5-4dc4-a63e-08446c9e9195",
+                "name": "Теория вероятностей и математическая статистика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "ed23b65e-5ff1-4855-a151-32b1807abd79",
+                "name": "Физика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "3f82ebf9-1df0-464d-8021-a257b07731fd",
+                "name": "Вождение машин",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "43a9b23e-a10a-4178-b8ff-d986fdea217e",
+                "name": "Информатика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "3cf78ef4-1c42-4bfe-9404-94d3cf320af0",
+                "name": "Экология",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "b1bc65e7-5005-40ea-a333-888a85f90090",
+                "name": "Инженерная и компьютерная графика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "bf1c472d-cd98-4bf2-a12d-3951adb53bd8",
+                "name": "Компоненты электронной техники",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "1dd013f5-fc04-4834-99a9-94fce5ae553b",
+                "name": "Материалы электронной техники",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "c8cae963-062a-4f5d-8c03-464cda057ccd",
+                "name": "Теоретические основы электротехники",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "f6df54d4-1fbf-47f5-8a1a-b3eb07fb1475",
+                "name": "Схемотехника",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "34de3eca-add0-434e-8825-973e0bc9b022",
+                "name": "Микропроцессорные устройства",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "32b358ac-8bb9-4419-b5aa-a8c90449954c",
+                "name": "Теоретические основы радиотехники",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "a552a1d6-623e-4ce7-bae7-4d9e673557a3",
+                "name": "Основы конструирования и технологии производства радиоэлектронных средств",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "bc3ed0ba-61c7-4f69-b0a2-ff34cfdd5a1a",
+                "name": "Безопасность жизнедеятельности",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "ec5ae982-5152-4a62-a364-3e2ed3df2a38",
+                "name": "Метрология, стандартизация и сертификация",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "474da700-cdaa-41ce-b96c-3fc59e6c96a5",
+                "name": "Физическая подготовка",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "5687dfe0-12f7-4e9c-86b3-919d3edc6999",
+                "name": "Многоканальные телекоммуникационные системы специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "a89fbfa5-bd86-4035-af40-d4adb62b514c",
+                "name": "Средства и комплексы радиорелейной и тропосферной связи специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "077ea329-8120-43e8-a5f3-8199b8273fc1",
+                "name": "Военная история",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "f2b84824-e9da-4b80-991e-cf4171dd2c70",
+                "name": "Психология и педагогика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "72fffd51-676b-4763-a356-27e9a02d52ab",
+                "name": "Военно-политическая работа в Вооруженных Силах РФ",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "bf688541-7811-4b14-8fd5-462790cd1de2",
+                "name": "Распространение радиоволн и антенно-фидерные устройства",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "a3c55bc1-2db8-42ec-a89e-1fde6852b9d1",
+                "name": "Системы радиосвязи специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "3075d643-fd4d-4bb4-95f0-11295551a9d1",
+                "name": "Радиорелейные и спутниковые системы передачи специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "27b99b9f-5c95-4ded-a310-f253092d70dc",
+                "name": "Системы многоканальной связи специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "e7917e53-2fb2-4ed0-9135-5dcf1fbe7852",
+                "name": "Системы коммутации специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "aa9915dd-ec84-49aa-a549-45b679e5a917",
+                "name": "Инфокоммуникационные системы специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "652af7e0-07c5-484c-8704-31a8f8806480",
+                "name": "Средства криптографической защиты информации",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "c7b55a03-1823-4240-89b8-f8d196f97404",
+                "name": "Защита инфокоммуникационных систем специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "95a46481-4afd-4cd6-9c52-76bbd68abcd2",
+                "name": "Эксплуатация ВВТ",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "178395de-903e-42ae-a8c5-553745c510f3",
+                "name": "Энергоснабжение устройств и систем телекоммуникаций",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "59e82a28-878c-4b07-80a7-c1e54c81b16c",
+                "name": "Автомобильная подготовка",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "a18cddaa-0a5a-404f-82f3-9880b9c162a3",
+                "name": "Основы построения сетей связи специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "b16529e8-aeaa-4f3a-8e2f-c5f5b8936458",
+                "name": "Операционные системы специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "038ceb4e-61af-47d6-8a7c-6c26661c692b",
+                "name": "Автоматизированные системы управления войсками",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "af7c7fff-7d0f-40c7-b158-e47db5023795",
+                "name": "Общая тактика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "c5fa84ae-d9e5-425b-a6aa-bf4bfc91d436",
+                "name": "Военно-инженерная подготовка",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "970ad841-d202-4071-b05b-41f66b5d4afd",
+                "name": "Радиационная, химическая и биологическая защита",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "989f4fa5-199c-439b-9a58-c82ee926bf02",
+                "name": "Общевоинские уставы ВС РФ",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "4ca218d8-1226-45d9-81cf-bb07cf341d20",
+                "name": "Огневая подготовка",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "a643b168-4171-475e-9bf3-a2c53994b26f",
+                "name": "Строевая подготовка",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "f57eb316-4b5e-45e0-87dd-6b7c95a3a2fb",
+                "name": "Управление подразделениями в мирное время",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "b55fff7a-e889-4958-a2ba-9d755987c5e0",
+                "name": "Медицинская подготовка",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "10a8f55b-3a08-4d4e-aa2e-b6eba4c87f65",
+                "name": "Военная топография",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "e0eda935-e81a-4930-a867-22abaac5ebd9",
+                "name": "Защита государственной тайны",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "46853cd3-46ae-46b0-a6c7-9dc75df5a565",
+                "name": "Организация связи в подразделениях и частях общевойсковых соединений",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "855d5a61-a3ef-4fc5-bb58-076068071e6e",
+                "name": "Боевое применение подразделений связи (управления)",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "d12948fd-224c-4660-8251-0de02ba194bc",
+                "name": "Учебная ознакомительная практика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "9489315d-4567-46e4-89a8-91b73570f313",
+                "name": "Учебная военно-профессиональная практика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "fc2819aa-8acd-4b82-9beb-309d3e6c89c0",
+                "name": "Учебная преддипломная практика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "5b1bb958-a5f9-453a-8013-35be189387f9",
+                "name": "Производственная эксплуатационная практика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "dc23883b-1c41-4c84-a79f-4befdc3da85f",
+                "name": "Производственная практика. Научно-исследовательская работа",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "f83994dc-30e1-4e23-a115-9ca51d412672",
+                "name": "Производственная практика. Войсковая стажировка",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "edaa4ffb-e88a-43aa-ab83-6686e093ae07",
+                "name": "Боевое применение подразделений связи (управления), применение узлов связи пунктов управления общевойсковых соединений, частей (подразделений) и элементов узлов связи пунктов управления объединений Сухопутных войск",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "928b1270-2ef0-457a-bcd5-5daed9a1f596",
+                "name": "Вычислительная математика",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "43ed4a5c-9312-4bd9-8e73-df95aa85947b",
+                "name": "Специальные разделы физики",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "bdf26159-4e04-4dd1-aa0e-6e4bf395e52b",
+                "name": "Программирование",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "0cd65783-6af7-42b2-9fbf-abd03adbc57c",
+                "name": "ЭВМ и периферийные устройства",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "cce72581-10a1-4919-8264-3392e7d4b533",
+                "name": "Защита информации",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "425ec1f1-0d5a-4dc7-b29c-1a752b233f2b",
+                "name": "Сети и телекоммуникации",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "ae329588-3e3c-418b-8c26-6f5999cf2036",
+                "name": "Базы данных",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "68b6b629-86cd-4dc1-a7bb-62e098218a56",
+                "name": "Операционные системы",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "acc1edda-30f6-49e2-879a-405a30c254c5",
+                "name": "Моделирование и проектирование систем",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "4ad5e5c6-3229-45a8-8cd4-ba814f7c3712",
+                "name": "Электроника, электротехника и схемотехника",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "af9c41cd-cfeb-4245-b1d1-3ee15153dc8e",
+                "name": "Теория автоматов",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "9b418174-e600-4584-9a9c-26d2ad43f867",
+                "name": "Администрирование вычислительных сетей специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "8cd401fd-5337-49d1-b8ee-7b1d8c08638b",
+                "name": "Центры обработки данных специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "358ba110-af00-40a4-beb9-7f31e795abc8",
+                "name": "Энергоснабжение объектов автоматизации",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "008f996d-16e6-4547-aef0-0341947ac4fe",
+                "name": "Автоматизированные системы специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "22acec65-4844-4712-beb3-dcd44268941c",
+                "name": "Эксплуатация автоматизированных систем специального назначения",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "f97e11f7-f6a1-4510-8fb5-66f0bb96753c",
+                "name": "Военная техника связи",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "940cb967-288d-4b60-9df5-758e9e6b1b6a",
+                "name": "Методы и средства криптографической защиты информации",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "442d16f4-b157-4555-b5ab-74a02cb360cd",
+                "name": "Медицинское обеспечение",
+                "code": null,
+                "keyword": false,
+                "children": []
+            },
+            {
+                "id": "5d4bc539-1374-4d61-a9b9-1d73e333dd87",
+                "name": "Боевое применение подразделений автоматизации, центров автоматизированных систем управления узлов связи пунктов управления объединений Сухопутных войск",
+                "code": null,
+                "keyword": false,
+                "children": []
+            }
+        ]
+    }
+]

@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}{{file.name}}{% endblock title %}
+
+{% block static_file %}
+<link rel="stylesheet" type="text/css" href="/static/css/file_search.css" />
+<script src="/static/js/file_search.js" defer></script>
+<script src="/static/js/utils.js" defer></script>
+
+<!-- Для pdf -->
+<script src="/static/js/libs/pdf/pdf.min.js"></script>
+<script src="/static/js/viewers/pdf.js"></script>
+
+<!-- Для glb, video 360, picture 360 -->
+<script src="/static/js/libs/glb/three.min.js"></script>
+<script src="/static/js/libs/glb/GLTFLoader.js"></script>
+<script src="/static/js/libs/glb/OrbitControls.js"></script>
+<script src="/static/js/libs/glb/dat.gui.min.js"></script>
+<script src="/static/js/viewers/glb.js"></script>
+<script src="/static/js/viewers/video_360.js"></script>
+<script src="/static/js/viewers/picture_360.js"></script>
+
+<!-- Для xlsx -->
+<script src="/static/js/libs/xlsl/xlsx.full.min.js"></script>
+<script src="/static/js/viewers/xlsl.js"></script>
+
+<!-- Для pptx -->
+<link rel="stylesheet" type="text/css" href="/static/css/pptx/nv.d3.min.css" />
+<link rel="stylesheet" type="text/css" href="/static/css/pptx/pptxjs.css" />
+
+<script type="text/javascript" src="/static/js/libs/pptx/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="/static/js/libs/pptx/jszip.min.js"></script>
+<script type="text/javascript" src="/static/js/libs/pptx/filereader.js"></script>
+<script type="text/javascript" src="/static/js/libs/pptx/d3.min.js"></script>
+<script type="text/javascript" src="/static/js/libs/pptx/nv.d3.min.js"></script>
+<script type="text/javascript" src="/static/js/libs/pptx/pptxjs.js"></script>
+<script type="text/javascript" src="/static/js/libs/pptx/divs2slides.js"></script>
+<script type="text/javascript" src="/static/js/libs/pptx/jquery.fullscreen-min.js"></script>
+
+<script src="/static/js/viewers/pptx.js"></script>
+
+<!-- Для аудио -->
+<script src="/static/js/viewers/audio.js"></script>
+<link rel="stylesheet" type="text/css" href="/static/css/audio.css" />
+
+<!-- Для СПО Библио -->
+<script src="/static/js/viewers/biblio.js"></script>
+{% endblock static_file %}
+
+{% block content %}
+<header>
+
+</header>
+
+<div id="file-viewer" class="container">
+    <script>
+        console
+        window.addEventListener('load', () => {
+            let block = document.getElementById('file-viewer');
+            
+            createFileViewer(block, {
+                url: "{{ url_for('api_download_file', id=file.id) }}",
+                name: "{{ file.name }}",
+                ext: "{{ file.content.extension }}",
+                is_360: "{{ file| is_360 }}".toLowerCase() == 'true',
+            });
+        })
+    </script>
+</div>
+
+<footer>
+
+</footer>
+
+{% endblock content %}
